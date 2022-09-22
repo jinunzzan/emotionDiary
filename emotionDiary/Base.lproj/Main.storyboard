@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-RL-13h">
-                                <rect key="frame" x="-1" y="47" width="391" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-RL-13h">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                                 <color key="barTintColor" red="0.8392156959" green="0.82352948189999997" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <navigationItem title="감정 다이어리" id="8Lf-Ao-lhC"/>
@@ -271,14 +270,40 @@ Cg
                                     <constraint firstAttribute="height" constant="400" id="QOf-Iz-0S5"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Hb-OYU">
+                                <rect key="frame" x="140" y="687" width="110" height="74"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="초기화">
+                                            <attributes>
+                                                <font key="NSFont" size="25" name="AppleSDGothicNeo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reset:" destination="eaB-D2-1Ru" eventType="touchUpInside" id="BRj-nW-yiU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IjR-y3-oOW"/>
                         <color key="backgroundColor" red="0.8392156959" green="0.82352948189999997" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="wEV-43-hxg" firstAttribute="centerX" secondItem="cTb-u3-sNd" secondAttribute="centerX" id="45k-9n-vuJ"/>
-                            <constraint firstItem="wEV-43-hxg" firstAttribute="centerY" secondItem="cTb-u3-sNd" secondAttribute="centerY" id="nDo-n4-NKa"/>
+                            <constraint firstItem="QNz-RL-13h" firstAttribute="top" secondItem="IjR-y3-oOW" secondAttribute="top" id="22h-ut-4xy"/>
+                            <constraint firstAttribute="trailing" secondItem="QNz-RL-13h" secondAttribute="trailing" id="2XQ-Pm-n2K"/>
+                            <constraint firstItem="wEV-43-hxg" firstAttribute="centerY" secondItem="cTb-u3-sNd" secondAttribute="centerY" id="76Z-hg-reG"/>
+                            <constraint firstItem="wEV-43-hxg" firstAttribute="centerX" secondItem="qCR-Hb-OYU" secondAttribute="centerX" id="HQ4-UU-G9d"/>
+                            <constraint firstItem="qCR-Hb-OYU" firstAttribute="centerX" secondItem="cTb-u3-sNd" secondAttribute="centerX" id="M29-sg-dwF"/>
+                            <constraint firstItem="wEV-43-hxg" firstAttribute="centerX" secondItem="QNz-RL-13h" secondAttribute="centerX" id="WxB-Ar-6di"/>
+                            <constraint firstItem="qCR-Hb-OYU" firstAttribute="top" secondItem="wEV-43-hxg" secondAttribute="bottom" constant="84" id="ZVJ-md-9bv"/>
+                            <constraint firstItem="qCR-Hb-OYU" firstAttribute="top" secondItem="wEV-43-hxg" secondAttribute="bottom" constant="84" id="bjn-gF-SEC"/>
+                            <constraint firstItem="qCR-Hb-OYU" firstAttribute="leading" secondItem="IjR-y3-oOW" secondAttribute="leading" constant="150.66999999999999" id="vgv-kj-sDW"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="label1" destination="i1x-u1-HfI" id="dl2-lE-P8r"/>
                         <outlet property="label2" destination="Shg-hr-cB1" id="8oK-cR-Aeg"/>
